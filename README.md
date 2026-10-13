@@ -65,6 +65,13 @@ Compile with Visual Studio; tested with 2019.
 
 ### On Linux
 
+[![Linux binaries](https://github.com/vertigo-red/SpaceCadetPinball/actions/workflows/LinuxBuild.yml/badge.svg)](https://github.com/vertigo-red/SpaceCadetPinball/actions/workflows/LinuxBuild.yml)
+
+Prebuilt native **x86_64 ELF archives and AppImages** are available as artifacts in
+[GitHub Actions](https://github.com/vertigo-red/SpaceCadetPinball/actions/workflows/LinuxBuild.yml).
+See the [Linux build and launch instructions](Platform/Linux/README.md), including NixOS.
+Original game resources are required and are not included.
+
 Install devel packages for `SDL2` and `SDL2_mixer`.\
 Compile with CMake; tested with GCC 10, Clang 11.\
 To cross-compile for Windows, install a 64-bit version of mingw and its `SDL2` and `SDL2_mixer` distributions, then use the `mingwcc.cmake` toolchain.

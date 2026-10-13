@@ -97,11 +97,13 @@ nix-shell -p cmake ninja pkg-config SDL2 SDL2_mixer --run 'bash build-linux.sh'
 ```
 
 AppImage packaging is an additional step. Install `desktop-file-utils`, `patchelf`
-and `timgm6mb-soundfont`, download and verify the linuxdeploy version pinned in
+and `timgm6mb-soundfont`, download and verify the linuxdeploy and AppImage runtime versions pinned in
 `.github/workflows/LinuxBuild.yml`, then run:
 
 ```sh
-LINUXDEPLOY=/absolute/path/to/linuxdeploy-x86_64.AppImage bash Platform/Linux/package-appimage.sh
+LINUXDEPLOY=/absolute/path/to/linuxdeploy-x86_64.AppImage \
+LDAI_RUNTIME_FILE=/absolute/path/to/runtime-x86_64 \
+bash Platform/Linux/package-appimage.sh
 ```
 
 ## Validation limits
